@@ -174,9 +174,6 @@ p {
   .abstract_size {
     font-size: 0.9rem;
   }
-  .span_size {
-    font-size: 21px;
-  }
 }
 @media (min-width: 770px) and (max-width: 1200px) {
   .h2_size {
@@ -193,9 +190,6 @@ p {
   }
   .abstract_size {
     font-size: 0.4rem;
-  }
-  .span_size {
-    font-size: 17px;
   }
 }
 @media (min-width: 530px) and (max-width: 770px) {
@@ -217,9 +211,6 @@ p {
   .abstract_size {
     font-size: 8px;
   }
-  .span_size {
-    font-size: 12px;
-  }
 }
 @media (max-width: 530px) {
   .h2_size {
@@ -236,9 +227,6 @@ p {
   }
   .abstract_size {
     font-size: 8px;
-  }
-  .span_size {
-    font-size: 10px;
   }
 }
 
