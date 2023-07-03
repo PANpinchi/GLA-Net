@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>GLA-Net</title>
+        <!-- Bootstrap css js jquery-->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/7bdf6b5116.js"></script>
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a id="title" class="navbar-brand" href="#page-top">Global-Local Awareness Network (GLA-Net)</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#page-top">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#abstract">Abstract</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiments">Experiments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead -->
+        <header id="masthead" class="masthead">
+            <div class="container px-4 px-lg-5 h-100" >
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <p style="color: white; font-weight: bolder; font-size: 2.2rem;">GLOBAL-LOCAL AWARENESS NETWORK</p>
+                        <p style="color: white; font-weight: bolder; font-size: 2.2rem;">FOR IMAGE SUPER-RESOLUTION</p>
+                        <h5 style="margin-top: 2%; margin-bottom: 2%;">
+                            <a href="#" style="text-decoration: none; margin-right: 5%;">Pin-Chi Pan<sup>*†</sup></a>  
+                            <a href="#" style="text-decoration: none; margin-right: 5%;">Tzu-Hao Hsu<sup>*§</sup></a>
+                            <a href="#" style="text-decoration: none; margin-right: 5%;">Wen-Li Wei<sup>*</sup></a>
+                            <a href="#" style="text-decoration: none;">Jen-Chun Lin<sup>*</sup></a>
+                        </h5>
+                        <h6 style="color: white; margin-bottom: 1%;">* Institute of Information Science, Academia Sinica, Taiwan</h6>
+                        <h6 style="color: white; margin-bottom: 1%;">† Department of Electrical Engineering, National Chung Cheng University</h6>
+                        <h6 style="color: white; margin-bottom: 2.4%;">§ Graduate Institute of Electrical Engineering, National Taiwan University</h6> 
+                        <h5 style="margin-bottom: 2.6%;">
+                            <a href="./assets/pdf/GLA_Net_Paper.pdf" style="text-decoration: none; margin-right: 3%;" target=”_blank”> [Paper] </a>
+                            <a href="#" style="text-decoration: none;" > [Code] </a>
+                        </h5>
+                        <a class="btn btn-light btn-lg" style="border-radius: 20px; font-size: 18px;" href="#abstract"><strong>more</strong></a>
+                    </div>
+                    <div class="col-lg-8 align-self-baseline"></div>
+                </div>
+            </div>
+        </header>
+        <!-- Abstract -->
+        <section class="page-section" style="background-color: #ffffff; margin-bottom: -100px;" id="abstract">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <h2>Abstract</h2>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <div class="col-12" style="text-align: center;">
+                        <img src="./assets/img/architecture.png" alt="" style="width: 100%;">
+                        <h6 style="font-size: 15px;">
+                            <i>
+                                The architecture of the proposed GLA-Net for single image super-resolution. 
+                                Where &copy; and <span style="font-size: 22px;">&oplus;</span> 
+                                denote concatenation and element-wise sum, respectively.
+                            </i>
+                        </h6>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            Deep-net models based on self-attention, such as Swin Transformer, 
+                            have achieved great success for single image superresolution (SISR). 
+                            While self-attention excels at modeling global information, 
+                            it is less effective at capturing high frequencies (e.g., edges etc.) that deliver local information primarily, 
+                            which is crucial for SISR. To tackle this, 
+                            we propose a global-local awareness network (GLA-Net) to effectively capture global and local information 
+                            to learn comprehensive features with low- and high-frequency information. 
+                            First, we design a GLA layer that combines a high-frequency-oriented Inception module 
+                            with a low-frequency-oriented Swin Transformer module to simultaneously process local and global information. 
+                            Second, we introduce dense connections inbetween GLA blocks to strengthen feature propagation and 
+                            alleviate the vanishing-gradient problem, where each GLA block is composed of several GLA layers. 
+                            By coupling these core designs, GLA-Net achieves SOTA performance on SISR.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experiments -->
+        <section class="page-section" style="background-color: #f0f0f0; margin-bottom: -100px;" id="experiments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <h2>Experiments</h2>
+                    </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="col-12">
+                        <h4>【Comparison with State-of-the-Art Methods】</h4>
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            <strong>Table 1.</strong> Quantitative comparison (average PSNR/SSIM for scale ×2, ×4) with 
+                            state-of-the-art methods on benchmark datasets(Set5, Set14, BSD100, Urban100, and Manga109). 
+                            Bold denotes the best and underlined denotes the second best performance.
+                        </h6>
+                        <img src="./assets/img/quantitative_comparison.png" alt="" style="width: 100%;">
+                    </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="col-12">
+                        <h4>【Visual Comparison】</h4>
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            <strong>Fig. 1.</strong> Visual comparison with state-of-the-art SwinIR [7] at 4× super-resolution. 
+                            Our GLA-Net is more effective at recovering local details, such as edges, than SwinIR.
+                        </h6>
+                        <img src="./assets/img/visual_comparison.png" alt="" style="width: 100%;">
+                    </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="col-12">
+                        <h4>【Qualitative Comparison - ×2】</h4>
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            <strong>Fig. 4.</strong> Qualitative comparison of SwinIR [7] and our GLA-Net on Set14 and Urban100 datasets. 
+                            It is the result of 2× super-resolution. Best viewed by zooming.
+                        </h6>
+                        <img src="./assets/img/qualitative_comparison_x2.png" alt="" style="width: 100%;">
+                    </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="col-12">
+                        <h4>【Qualitative Comparison - ×4】</h4>
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            <strong>Fig. 4.</strong> Qualitative comparison of SwinIR [7] and our GLA-Net on Urban100 and BSD100 datasets. 
+                            It is the result of 4× super-resolution. Best viewed by zooming.
+                        </h6>
+                        <img src="./assets/img/qualitative_comparison_x4.png" alt="" style="width: 100%;">
+                    </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="col-12">
+                        <h4>【Ablation Study】</h4>
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            <strong>Table 2.</strong> Ablation study for removing different modules of the GLA-Net on the Urban100 dataset at 2× super-resolution.
+                        </h6>
+                        <div style="text-align: center;">
+                            <img src="./assets/img/ablation_study.png" alt="" style="width: 80%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- References -->
+        <section class="page-section" style="background-color: #ffffff; margin-bottom: -100px;" id="references">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <h2>References</h2>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [1] Wilman W. W. Zou and Pong C. Yuen, “Very low resolution face recognition problem,” 
+                            IEEE Transactions on Image Processing, vol. 21, no. 1, pp. 327–340, 2012.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [2] Wenzhe Shi, Jose Caballero, Christian Ledig, Xiahai Zhuang, Wenjia Bai, Kanwal Bhatia, 
+                            Antonio Marvao, Tim Dawes, Declan O’Regan, and Daniel Rueckert, 
+                            “Cardiac image superresolution with global correspondence using multi-atlas patchmatch,” 
+                            in International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2013.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [3] Mehdi S. M. Sajjadi, Bernhard Scholkopf, and Michael Hirsch, 
+                            “EnhanceNet: Single image super-resolution through automated texture synthesis,” 
+                            in IEEE International Conference on Computer Vision (ICCV), 2017.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [4] Yulun Zhang, Kunpeng Li, Kai Li, Bineng Zhong, and Yun Fu, 
+                            “Residual non-local attention networks for image restoration,” 
+                            in International Conference on Learning Representations (ICLR), 2019.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [5] Yiqun Mei, Yuchen Fan, Yuqian Zhou, Lichao Huang, Thomas S. Huang, and Honghui Shi, 
+                            “Image super-resolution with cross-scale non-local attention and exhaustive self-exemplars mining,” 
+                            in IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [6] Yiqun Mei, Yuchen Fan, and Yuqian Zhou, 
+                            “Image super-resolution with non-local sparse attention,” 
+                            in IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [7] Jingyun Liang, Jiezhang Cao, Guolei Sun, Kai Zhang, Luc Van Gool, and Radu Timofte, 
+                            “SwinIR: Image restoration using swin transformer,” 
+                            IEEE/CVF International Conference on Computer Vision Workshops (ICCVW), 2021.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [8] Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, and Baining Guo, 
+                            “Swin transformer: Hierarchical vision transformer using shifted windows,” 
+                            in IEEE/CVF International Conference on Computer Vision (ICCV), 2021.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [9] Namuk Park and Songkuk Kim, “How do vision transformers work?,” 
+                            in The Tenth International Conference on Learning Representations (ICLR), 2022.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [10] Chenyang Si, Weihao Yu, Pan Zhou, Yichen Zhou, Xinchao Wang, and Shuicheng Yan, 
+                            “Inception transformer,” in Advances in Neural Information Processing Systems (NeurIPS), 2022.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [11] Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jon Shlens, and Zbigniew Wojna, 
+                            “Rethinking the inception architecture for computer vision,” in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [12] Gao Huang, Zhuang Liu, Laurens van der Maaten, and Kilian Q. Weinberger, 
+                            “Densely connected convolutional networks,” 
+                            in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [13] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, 
+                            Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin, 
+                            “Attention is all you need,” in Advances in Neural Information Processing Systems (NeurIPS), 2017.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [14] Wenzhe Shi, Jose Caballero, Ferenc Huszar, Johannes Totz, Andrew P. Aitken, 
+                            Rob Bishop, Daniel Rueckert, and Zehan Wang, 
+                            “Real-time single image and video super-resolution using an efficient 
+                            sub-pixel convolutional neural network,” 
+                            in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [15] Diederik P. Kingma and Jimmy Ba, “Adam: A method for stochastic optimization,” 
+                            in International Conference on Learning Representations (ICLR), 2015.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [16] Adam Paszke, Sam Gross, Soumith Chintala, Gregory Chanan, Edward Yang, Zachary DeVito, 
+                            Zeming Lin, Alban Desmaison, Luca Antiga, and Adam Lerer, “Automatic differentiation in PyTorch,” 
+                            in NeurIPS Workshop on Autodiff, 2017.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [17] Eirikur Agustsson and Radu Timofte, 
+                            “NTIRE 2017 challenge on single image super-resolution: Dataset and study,” 
+                            in IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), 2017.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [18] Marco Bevilacqua, Aline Roumy, Christine Guillemot, and Marie-line Alberi Morel, 
+                            “Low-complexity single-image super-resolution based on nonnegative neighbor embedding,” 
+                            in Proceedings of the British Machine Vision Conference (BMVC), 2012.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [19] Roman Zeyde, Michael Elad, and Matan Protter, 
+                            “On single image scale-up using sparse-representations,” 
+                            in International Conference on Curves and Surfaces (ICCS), 2010.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [20] David Martin, Charless Fowlkes, Doron Tal, and Jitendra Malik, 
+                            “A database of human segmented natural images and its application to 
+                            evaluating segmentation algorithms and measuring ecological statistics,” 
+                            in Proceedings Eighth IEEE International Conference on Computer Vision (ICCV), 2001.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [21] Jia-Bin Huang, Abhishek Singh, and Narendra Ahuja, 
+                            “Single image super-resolution from transformed self-exemplars,” 
+                            in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2015.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [22] Yusuke Matsui, Kota Ito, Yuji Aramaki, Azuma Fujimoto, Toru Ogawa, 
+                            Toshihiko Yamasaki, and Kiyoharu Aizawa, 
+                            “Sketchbased manga retrieval using manga109 dataset,” 
+                            Multimedia Tools and Applications, vol. 76, pp. 21811–21838, 2017.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [23] Yulun Zhang, Kunpeng Li, Kai Li, Lichen Wang, Bineng Zhong, and Yun Fu, 
+                            “Image super-resolution using very deep residual channel attention networks,” 
+                            in European Conference on Computer Vision (ECCV), 2018.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [24] Tao Dai, Jianrui Cai, Yongbing Zhang, Shu-Tao Xia, and Lei Zhang, 
+                            “Second-order attention network for single image super-resolution,” 
+                            in IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [25] Shangchen Zhou, Jiawei Zhang, Wangmeng Zuo, and Chen Change Loy, 
+                            “Cross-scale internal graph neural network for image super-resolution,” 
+                            in Proceedings of the 34th International Conference on Neural Information Processing Systems (NeurIPS), 2020.
+                        </h6>
+                    </div>
+                    <div class="col-12">
+                        <h6 style="text-align: justify; line-height: 200%;">
+                            [26] Ben Niu, Weilei Wen, Wenqi Ren, Xiangde Zhang, Lianping Yang, Shuzhen Wang, 
+                            Kaihao Zhang, Xiaochun Cao, and Haifeng Shen, 
+                            “Single image super-resolution via a holistic attention network,” 
+                            in European Conference on Computer Vision(ECCV), 2020.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Information -->
+        <section class="page-section" style="background-color: #f0f0f0; margin-bottom: -100px;" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <h2>Contact Information</h2>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <div class="col-12">
+                        <h6 style="text-align: center; line-height: 200%;">
+                            Pin-Chi Pan, Wen-Li Wei, Jen-Chun Lin {pinchi1609@gmail.com; lilijinjin@gmail.com; jenchunlin@gmail.com}
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class=" py-5" style="background-color: #f8f8f8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <h2>Acknowledgements</h2>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <div class="col-12">
+                        <h6 style="text-align: center; line-height: 200%;">
+                            This work was supported in part by MOST under grant 110-2221-E-001-016-MY3 and 
+                            Academia Sinica under grant AS-TP-111-M02.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 1rem;"></div>
+            <div class="container px-4 px-lg-5">
+                <div class="small text-center text-muted">
+                    Copyright &copy; 2023 Institute of Information Science, Academia Sinica, Taiwan
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
+
