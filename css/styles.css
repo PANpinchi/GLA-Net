@@ -215,10 +215,10 @@ p {
     font-size: 0.3rem;
   }
   .abstract_size {
-    font-size: 10px;
+    font-size: 8px;
   }
   .span_size {
-    font-size: 17px;
+    font-size: 12px;
   }
 }
 @media (max-width: 530px) {
@@ -235,10 +235,10 @@ p {
     font-size: 10px;
   }
   .abstract_size {
-    font-size: 10px;
+    font-size: 8px;
   }
   .span_size {
-    font-size: 17px;
+    font-size: 12px;
   }
 }
 
