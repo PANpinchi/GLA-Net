@@ -159,6 +159,9 @@ p {
 }
 
 @media (min-width: 1200px) {
+  .title_size {
+    font-size: 1.25rem;
+  }
   .h2_size {
     font-size: 2.2rem;
   }
@@ -180,6 +183,9 @@ p {
   }
 }
 @media (min-width: 770px) and (max-width: 1200px) {
+  .title_size {
+    font-size: 1.1rem;
+  }
   .h2_size {
     font-size: 1.7rem;
   }
@@ -202,7 +208,7 @@ p {
 }
 @media (min-width: 530px) and (max-width: 770px) {
   .title_size {
-    font-size: 0.2rem;
+    font-size: 1rem;
   }
   .h2_size {
     font-size: 1.5rem;
@@ -225,6 +231,9 @@ p {
   }
 }
 @media (max-width: 530px) {
+  .title_size {
+    font-size: 0.8rem;
+  }
   .h2_size {
     font-size: 1.2rem;
   }
