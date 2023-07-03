@@ -48,18 +48,18 @@
             <div class="container px-4 px-lg-5 h-100" >
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h2 class="h2_size" style="color: white; font-weight: bolder;">GLOBAL-LOCAL AWARENESS NETWORK</h2>
-                        <h2 class="h2_size" style="color: white; font-weight: bolder;">FOR IMAGE SUPER-RESOLUTION</h2>
-                        <h5 class="h5_size" style="margin-top: 2%; margin-bottom: 2%;;">
+                        <h2 style="color: white; font-weight: bolder;">GLOBAL-LOCAL AWARENESS NETWORK</h2>
+                        <h2 style="color: white; font-weight: bolder;">FOR IMAGE SUPER-RESOLUTION</h2>
+                        <h5 style="margin-top: 2%; margin-bottom: 2%;;">
                             <a href="#" style="text-decoration: none; margin-right: 5%;">Pin-Chi Pan<sup>*†</sup></a>  
                             <a href="#" style="text-decoration: none; margin-right: 5%;">Tzu-Hao Hsu<sup>*§</sup></a>
                             <a href="#" style="text-decoration: none; margin-right: 5%;">Wen-Li Wei<sup>*</sup></a>
                             <a href="#" style="text-decoration: none;">Jen-Chun Lin<sup>*</sup></a>
                         </h5>
-                        <h6 class="h6_size" style="color: white; margin-bottom: 1%;">* Institute of Information Science, Academia Sinica, Taiwan</h6>
-                        <h6 class="h6_size" style="color: white; margin-bottom: 1%;">† Department of Electrical Engineering, National Chung Cheng University</h6>
-                        <h6 class="h6_size" style="color: white; margin-bottom: 2.4%;">§ Graduate Institute of Electrical Engineering, National Taiwan University</h6> 
-                        <h5 class="h5_size" style="margin-bottom: 2.6%;">
+                        <h6 style="color: white; margin-bottom: 1%;">* Institute of Information Science, Academia Sinica, Taiwan</h6>
+                        <h6 style="color: white; margin-bottom: 1%;">† Department of Electrical Engineering, National Chung Cheng University</h6>
+                        <h6 style="color: white; margin-bottom: 2.4%;">§ Graduate Institute of Electrical Engineering, National Taiwan University</h6> 
+                        <h5 style="margin-bottom: 2.6%;">
                             <a href="./assets/pdf/GLA_Net_Paper.pdf" style="text-decoration: none; margin-right: 3%;" target=”_blank”> [Paper] </a>
                             <a href="#" style="text-decoration: none;" > [Code] </a>
                         </h5>
@@ -71,37 +71,39 @@
         </header>
         <!-- Abstract -->
         <section class="page-section" style="background-color: #ffffff;" id="abstract">
-            <div class="row">
-                <div class="col-12" style="text-align: center;">
-                    <h2>Abstract</h2>
-                </div>
-                <div style="height: 1rem;"></div>
-                <div class="col-12" style="text-align: center;">
-                    <img src="./assets/img/architecture.png" alt="" style="width: 100%;">
-                    <h6>
-                        <i class="abstract_size">
-                            The architecture of the proposed GLA-Net for single image super-resolution. 
-                            Where &copy; and <span class="span_size">&oplus;</span> 
-                            denote concatenation and element-wise sum, respectively.
-                        </i>
-                    </h6>
-                </div>
-                <div style="height: 1rem;"></div>
-                <div class="col-12">
-                    <h6 class="h6_size" style="text-align: justify; line-height: 200%;">
-                        Deep-net models based on self-attention, such as Swin Transformer, 
-                        have achieved great success for single image superresolution (SISR). 
-                        While self-attention excels at modeling global information, 
-                        it is less effective at capturing high frequencies (e.g., edges etc.) that deliver local information primarily, 
-                        which is crucial for SISR. To tackle this, 
-                        we propose a global-local awareness network (GLA-Net) to effectively capture global and local information 
-                        to learn comprehensive features with low- and high-frequency information. 
-                        First, we design a GLA layer that combines a high-frequency-oriented Inception module 
-                        with a low-frequency-oriented Swin Transformer module to simultaneously process local and global information. 
-                        Second, we introduce dense connections inbetween GLA blocks to strengthen feature propagation and 
-                        alleviate the vanishing-gradient problem, where each GLA block is composed of several GLA layers. 
-                        By coupling these core designs, GLA-Net achieves SOTA performance on SISR.
-                    </h6>
+            <div class="container px-4 px-lg-5 h-100" >
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <h2>Abstract</h2>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <div class="col-12" style="text-align: center;">
+                        <img src="./assets/img/architecture.png" alt="" style="width: 100%;">
+                        <h6>
+                            <i class="abstract_size">
+                                The architecture of the proposed GLA-Net for single image super-resolution. 
+                                Where &copy; and <span class="span_size">&oplus;</span> 
+                                denote concatenation and element-wise sum, respectively.
+                            </i>
+                        </h6>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <div class="col-12">
+                        <h6 class="h6_size" style="text-align: justify; line-height: 200%;">
+                            Deep-net models based on self-attention, such as Swin Transformer, 
+                            have achieved great success for single image superresolution (SISR). 
+                            While self-attention excels at modeling global information, 
+                            it is less effective at capturing high frequencies (e.g., edges etc.) that deliver local information primarily, 
+                            which is crucial for SISR. To tackle this, 
+                            we propose a global-local awareness network (GLA-Net) to effectively capture global and local information 
+                            to learn comprehensive features with low- and high-frequency information. 
+                            First, we design a GLA layer that combines a high-frequency-oriented Inception module 
+                            with a low-frequency-oriented Swin Transformer module to simultaneously process local and global information. 
+                            Second, we introduce dense connections inbetween GLA blocks to strengthen feature propagation and 
+                            alleviate the vanishing-gradient problem, where each GLA block is composed of several GLA layers. 
+                            By coupling these core designs, GLA-Net achieves SOTA performance on SISR.
+                        </h6>
+                    </div>
                 </div>
             </div>
         </section>
