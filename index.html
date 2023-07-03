@@ -63,9 +63,9 @@
                             <a href="./assets/pdf/GLA_Net_Paper.pdf" style="text-decoration: none; margin-right: 1.8vw;" target=”_blank”> [Paper] </a>
                             <a href="#" style="text-decoration: none;" > [Code] </a>
                         </h5>
-                        <h6>
-                            <a class="btn btn-light btn-lg" style="font-size: 3vw; font-weight: bolder; border-radius: 20px;" href="#abstract">more</a>
-                        </h6>
+                        <a class="btn btn-light" style="border-radius: 20px;" href="#abstract">
+                            <h6 class="btn_size" style="font-weight: bolder;">more</h6>
+                        </a>
                     </div>
                     <div class="col-lg-8 align-self-baseline"></div>
                 </div>
@@ -414,9 +414,11 @@
 
             if(mobile_flag || window_w < 550){
                 $('#title').text('GLA-Net');
+                $('header.masthead').css('background', 'linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/home2.png")');
             }
             else{
                 $('#title').text('Global-Local Awareness Network (GLA-Net)');
+                $('header.masthead').css('background', 'linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/home.png")');
             }
         }, 100);
     });
