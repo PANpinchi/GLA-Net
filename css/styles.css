@@ -215,7 +215,7 @@ p {
     font-size: 0.3rem;
   }
   .abstract_size {
-    font-size: 0.2rem;
+    font-size: 10px;
   }
   .span_size {
     font-size: 17px;
@@ -235,7 +235,7 @@ p {
     font-size: 10px;
   }
   .abstract_size {
-    font-size: 0.1rem;
+    font-size: 10px;
   }
   .span_size {
     font-size: 17px;
