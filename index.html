@@ -414,11 +414,26 @@
 
             if(mobile_flag || window_w < 550){
                 $('#title').text('GLA-Net');
+                $('header.masthead').css('height', '100vh');
+                $('header.masthead').css('padding-top', '10rem');
+                $('header.masthead').css('padding-bottom', 'calc(10rem - 4.5rem)');
+                $('header.masthead').css('background-position', 'center)');
                 $('header.masthead').css('background', 'linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/home2.png")');
+                $('header.masthead').css('background-position', 'center');
+                $('header.masthead').css('background-repeat', 'no-repeat');
+                $('header.masthead').css('background-attachment', 'scroll');
+                $('header.masthead').css('background-size', 'cover');
             }
             else{
                 $('#title').text('Global-Local Awareness Network (GLA-Net)');
+                $('header.masthead').css('padding-top', '10rem');
+                $('header.masthead').css('padding-bottom', 'calc(10rem - 4.5rem)');
+                $('header.masthead').css('background-position', 'center)');
                 $('header.masthead').css('background', 'linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/home.png")');
+                $('header.masthead').css('background-position', 'center');
+                $('header.masthead').css('background-repeat', 'no-repeat');
+                $('header.masthead').css('background-attachment', 'scroll');
+                $('header.masthead').css('background-size', 'cover');
             }
         }, 100);
     });
