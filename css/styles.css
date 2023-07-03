@@ -232,7 +232,7 @@ p {
 }
 @media (max-width: 530px) {
   .title_size {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
   .h2_size {
     font-size: 1.2rem;
